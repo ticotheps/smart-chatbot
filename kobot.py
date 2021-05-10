@@ -28,3 +28,9 @@ def ask(question, chat_log=None):
     story = response['choices'][0]['text']
     
     return str(story)
+
+def append_interaction_to_chat_log(question, answer, chat_log=None):
+    if chat_log is None:
+        chat_log = session_prompt
+        
+    return f'{chat_log}{restart_sequence} {question}{start_sequence}{answer}'
