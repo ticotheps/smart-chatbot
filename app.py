@@ -4,7 +4,7 @@ from kobot import ask, append_interaction_to_chat_log
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'any-random-string'
+app.config['SECRET_KEY'] = 'random-string'
 
 @app.route('/kobot', methods=['POST'])
 def kobe():
